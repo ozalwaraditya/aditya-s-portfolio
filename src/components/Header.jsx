@@ -37,8 +37,8 @@ const Header = () => {
             </li>
 
             <li className='nav__item'>
-              <a href="#blog" className='nav__link'>
-                <i className='uil uil-blogger nav__icon'></i> Blog
+              <a href="#projects" className='nav__link'>
+                <i className='uil uil-blogger nav__icon'></i> Projects
               </a>
             </li>
 

@@ -216,3 +216,7 @@ img {
     margin-right: var(--mb-1);
   }
 }
+
+body {
+    overflow-x: hidden;
+}
