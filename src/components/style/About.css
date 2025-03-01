@@ -1,0 +1,120 @@
+/* Increase overall section padding */
+.about {
+    padding: 4.8rem 0; /* 1.2x of original 4rem */
+}
+
+/* Enlarged grid layout */
+.about__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 4.8rem; /* Increased by 1.2x */
+}
+
+/* Increase image size */
+.about__img {
+    width: 420px; /* 1.2x of 350px */
+    border-radius: 1.8rem; /* Scaled up */
+    justify-self: center;
+}
+
+/* Enlarge info box */
+.about__info {
+    grid-template-columns: repeat(3, 168px); /* 1.2x of 140px */
+    gap: 0.6rem;
+    margin-bottom: var(--mb-2);
+}
+
+.about__box {
+    background-color: var(--container-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.9rem; /* Scaled up */
+    text-align: center;
+    padding: 1.2rem 1.5rem;
+}
+
+/* Icon size increased */
+.about__icon {
+    font-size: 1.8rem; /* 1.2x of 1.5rem */
+    color: var(--title-color);
+    margin-bottom: var(--mb-0-5);
+}
+
+/* Increase font sizes */
+.about__title {
+    font-size: 1.2em; /* Scaled up */
+    font-weight: var(--font-medium);
+}
+
+.about__subtitle {
+    font-size: 1em; /* Scaled up */
+}
+
+/* Description text size and spacing */
+.about__description {
+    font-size: 1.2rem; /* Increased */
+    padding: 0 4.8rem 0 0; /* Increased */
+    margin-bottom: var(--mb-3);
+}
+
+/* Enlarge button */
+.button {
+    font-size: 1.2rem; /* Text bigger */
+    padding: 1rem 1.4rem;
+    gap: 0.6rem;
+    margin-top: 1.2rem;
+}
+
+/* Increase button icon size */
+.button__icon {
+    width: 28px;
+    height: 28px;
+}
+
+/*=============== BREAKPOINTS ===============*/
+
+/* Large Devices (Tablets & Small Laptops) */
+@media screen and (max-width: 992px) {
+    .about__container {
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+    }
+
+    .about__img {
+        width: 264px; /* Scaled from 220px */
+    }
+
+    .about__data {
+        text-align: center;
+    }
+
+    .about__info {
+        justify-content: center;
+    }
+
+    .about__description {
+        padding: 0.6rem;
+        margin-bottom: 2.4rem;
+    }
+}
+
+/* Small Devices (Mobile Phones) */
+@media screen and (max-width: 576px) {
+    .about__info {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about__description {
+        padding: 0;
+    }
+}
+
+/* Extra Small Devices (Very Small Screens) */
+@media screen and (max-width: 350px) {
+    .about__info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.about {
+    padding: 10rem 0 4.8rem; /* Increased top padding from 4.8rem to 6rem */
+}

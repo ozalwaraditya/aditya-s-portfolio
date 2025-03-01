@@ -57,7 +57,7 @@ const Data = () => {
         </h1>
         <h3 className="home__subtitle">Software Developer</h3>
 
-        <p className="home__description"> Hi, I'm Aditya Ozalwar a passionate software developer with good knowledge in C# and .Net.  I am passionate about creating high-quality code that follows best practices and industry standards. Driven by a desire for continuous growth, I am always seeking new challenges and opportunities to enhance my skills.
+        <p className="home__description"> "I am Aditya Ozalwar, based in Pune, where I design my future." 🚀
         </p>
 
         <a href="#contact" className="button button--flex">Say Hello
