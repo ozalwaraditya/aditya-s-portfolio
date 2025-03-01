@@ -5,7 +5,6 @@ const Social = () => {
           href="https://www.instagram.com/adityaozalwar"
           className="home__social-icon"
           target="_blank"
-          rel="noopener noreferrer"
         >
           <i className="uil uil-instagram"></i>
         </a>
@@ -14,7 +13,6 @@ const Social = () => {
           href="https://www.github.com/ozalwaraditya"
           className="home__social-icon"
           target="_blank"
-          rel="noopener noreferrer"
         >
           <i className="uil uil-github"></i>
         </a>
@@ -22,6 +20,7 @@ const Social = () => {
         <a
           href="mailto:adityaozalwar14@gmail.com?subject=Hello%20Aditya&body=Hi%20there!"
           className="home__social-icon"
+          target="_blank"
         >
           <i className="uil uil-envelope"></i>
         </a>

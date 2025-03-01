@@ -1,24 +1,24 @@
-import Social from "../components/Social"
-import Data from "../components/Data"
-import '../components/style/Home.css'
-import ScrollDown from "../components/ScrollDown"
+  import Social from "../components/Social"
+  import Data from "../components/Data"
+  import '../components/style/Home.css'
+  import ScrollDown from "../components/ScrollDown"
 
-const Home = () => {
-  return (
-    <section className="home section" id="home">
-      <div className="home__container container grid">
-        <div className="home__content grid">
-          <Social/>
+  const Home = () => {
+    return (
+      <section className="home section" id="home">
+        <div className="home__container container grid">
+          <div className="home__content grid">
+            <Social/>
 
-          <div className="home__img"></div>
+            <div className="home__img"></div>
 
-          <Data/>
+            <Data/>
+          </div>
+
+          <ScrollDown/>
         </div>
+      </section>
+    )
+  }
 
-        <ScrollDown/>
-      </div>
-    </section>
-  )
-}
-
-export default Home
+  export default Home
