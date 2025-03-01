@@ -43,29 +43,31 @@
                 <div className="contact__card">
                 <i className="bx bx-envelope contact__card-icon"></i>
                 <h3 className="contact__card-title">Email</h3>
-                <span className="contact__card-data">adityaozalwar14@gmail.com</span>
+                <span className="contact__card-data">adityaozalwar03@gmail.com</span>
                 <a href="mailto:adityaozalwar14@gmail.com" className="contact__button">
                     Write Me <i className="bx bx-right-arrow-alt"></i>
                 </a>
                 </div>
 
-                {/* WhatsApp */}
+                
+
+                {/* LinkedIn */}
                 <div className="contact__card">
-                <i className="bx bxl-whatsapp contact__card-icon"></i>
-                <h3 className="contact__card-title">WhatsApp</h3>
-                <span className="contact__card-data">+91 90288 11084</span>
-                <a href="https://wa.me/919028811084" target="_blank" className="contact__button">
-                    Write Me <i className="bx bx-right-arrow-alt"></i>
+                <i className="bx bxl-linkedin contact__card-icon"></i>
+                <h3 className="contact__card-title">LinkedIn</h3>
+                <span className="contact__card-data">@ozalwaraditya</span>
+                <a href="https://www.linkedin.com/in/aditya-ozalwar-530283291/" target="_blank" className="contact__button">
+                    Text Me <i className="bx bx-right-arrow-alt"></i>
                 </a>
                 </div>
 
-                {/* Twitter */}
+                {/* Instagram */}
                 <div className="contact__card">
-                <i className="bx bxl-twitter contact__card-icon"></i>
-                <h3 className="contact__card-title">Twitter</h3>
-                <span className="contact__card-data">@yourusername</span>
-                <a href="https://twitter.com/yourusername" target="_blank" className="contact__button">
-                    Write Me <i className="bx bx-right-arrow-alt"></i>
+                  <i className="uil uil-instagram"></i>
+                <h3 className="contact__card-title">Instagram</h3>
+                <span className="contact__card-data">adityaozalwar</span>
+                <a href="https://www.instagram.com/adityaozalwar" target="_blank" className="contact__button">
+                    Follow Me <i className="bx bx-right-arrow-alt"></i>
                 </a>
                 </div>
             </div>
