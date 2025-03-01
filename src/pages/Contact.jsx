@@ -1,6 +1,33 @@
-    import '../components/style/Contact.css';
+    import React, { useRef, useState } from "react";
+    import * as emailjs from "emailjs-com";  // ✅ Fix import issue
+    import "../components/style/Contact.css";
 
     const Contact = () => {
+    const form = useRef();
+    const [isSent, setIsSent] = useState(false);
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+        .sendForm(
+            "service_4syv26m", // ⬅ Replace with your EmailJS Service ID
+            "template_il46tkp", // ⬅ Replace with your EmailJS Template ID
+            form.current,
+            "XgaxrelKCoNyPWKDV" // ⬅ Replace with your EmailJS Public Key
+        )
+        .then(
+            (result) => {
+            console.log("Email sent successfully:", result.text);
+            setIsSent(true);
+            form.current.reset();
+            },
+            (error) => {
+            console.error("Error sending email:", error.text);
+            }
+        );
+    };
+
     return (
         <section className="contact section" id="contact">
         <h2 className="section__title">Get in Touch</h2>
@@ -48,44 +75,34 @@
             <div className="contact__content">
             <h3 className="contact__title">Write Me Your Project</h3>
 
-            <form className="contact__form">
+            <form ref={form} onSubmit={sendEmail} className="contact__form">
                 <div className="contact__form-div">
                 <label className="contact__form-tag">Name</label>
-                <input type="text" className="contact__form-input" placeholder="Enter your name" />
+                <input type="text" name="name" className="contact__form-input" placeholder="Enter your name" required />
                 </div>
 
                 <div className="contact__form-div">
                 <label className="contact__form-tag">Email</label>
-                <input type="email" className="contact__form-input" placeholder="Enter your email" />
+                <input type="email" name="email" className="contact__form-input" placeholder="Enter your email" required />
                 </div>
 
                 <div className="contact__form-div">
                 <label className="contact__form-tag">Message</label>
                 <textarea
-                    name="project"
+                    name="message"
                     cols="30"
                     rows="5"
                     className="contact__form-input"
                     placeholder="Write your project details"
+                    required
                 ></textarea>
                 </div>
 
-                <button className="button button--flex">
+                <button type="submit" className="button button--flex">
                 Send Message
-                <svg
-                    className="button__icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                >
-                    <path
-                    d="M14.2199 21.9352C13.0399 21.9352 11.3699 21.1052 10.0499 17.1352L9.32988 14.9752L7.16988 14.2552C3.20988 12.9352 2.37988 11.2652 2.37988 10.0852C2.37988 8.91525 3.20988 7.23525 7.16988 5.90525L15.6599 3.07525C17.7799 2.36525 19.5499 2.57525 20.6399 3.65525C21.7299 4.73525 21.9399 6.51525 21.2299 8.63525L18.3999 17.1252C17.0699 21.1052 15.3999 21.9352 14.2199 21.9352Z"
-                    fill="var(--container-color)"
-                    ></path>
-                </svg>
                 </button>
+
+                {isSent && <p className="success-message">Message sent successfully! ✅</p>}
             </form>
             </div>
         </div>

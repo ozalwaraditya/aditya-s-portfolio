@@ -2,6 +2,7 @@ import './App.css'
 import Header from "./components/Header"
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Footer from './pages/Footer'
 import Home from './pages/Home'
 import Qualification from './pages/Qualification'
 import Skills from './pages/Skills'
@@ -17,6 +18,7 @@ const App = () => {
         <Skills/>
         <Qualification/>
         <Contact/>
+        <Footer/>
       </main>
     </>
   )
